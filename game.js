@@ -248,5 +248,3 @@ createShapeCanvas('triangle', '#5555ff', state.shapeCanvases);
 // Экспортируем для других модулей (например, tasks.js)
 window.initBoard = initBoard;
 window.render = () => render(ctx, canvas);
-
-export { fillBoard, dropTiles, swapTiles, initBoard };
