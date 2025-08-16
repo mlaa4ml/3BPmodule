@@ -117,7 +117,7 @@ function initGame() {
     }
 }
 
-export function initBoard() {
+function initBoard() {
     console.log('Initializing board...');
     try {
         if (!Number.isInteger(state.GRID_HEIGHT) || !Number.isInteger(state.GRID_WIDTH) || state.GRID_HEIGHT <= 0 || state.GRID_WIDTH <= 0) {
@@ -172,7 +172,7 @@ function resolveInitialMatches() {
     }
 }
 
-export function dropTiles() {
+function dropTiles() {
     try {
         for (let col = 0; col < state.GRID_WIDTH; col++) {
             let emptyRow = state.GRID_HEIGHT - 1;
@@ -194,7 +194,7 @@ export function dropTiles() {
     }
 }
 
-export function fillBoard() {
+function fillBoard() {
     try {
         for (let row = 0; row < state.GRID_HEIGHT; row++) {
             for (let col = 0; col < state.GRID_WIDTH; col++) {
@@ -219,7 +219,7 @@ export function fillBoard() {
     }
 }
 
-export async function swapTiles(r1, c1, r2, c2) {
+async function swapTiles(r1, c1, r2, c2) {
     try {
         const tile1 = state.board[r1][c1];
         const tile2 = state.board[r2][c2];
@@ -247,4 +247,9 @@ createShapeCanvas('triangle', '#5555ff', state.shapeCanvases);
 
 // Экспортируем для других модулей (например, tasks.js)
 window.initBoard = initBoard;
+window.swapTiles = swapTiles;
+window.dropTiles = dropTiles;
+window.fillBoard = fillBoard;
 window.render = () => render(ctx, canvas);
+
+//export { fillBoard, dropTiles, swapTiles, initBoard };
