@@ -9,10 +9,6 @@ import {
 } from './match.js';
 import { checkTaskCompletion } from './tasks.js';
 
-//import { swapTiles, initBoard, dropTiles, fillBoard } from './game.js';
-
-import { render, updateAnimations } from './render.js';
-
 export function handleTouchStart(event, canvas) {
     if (state.isProcessing) return;
     event.preventDefault();
