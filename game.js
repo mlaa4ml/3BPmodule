@@ -250,6 +250,6 @@ window.initBoard = initBoard;
 window.swapTiles = swapTiles;
 window.dropTiles = dropTiles;
 window.fillBoard = fillBoard;
-window.render = () => render(ctx, canvas);
+//window.render = () => render(ctx, canvas);
 
 //export { fillBoard, dropTiles, swapTiles, initBoard };
