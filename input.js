@@ -8,8 +8,8 @@ import {
     handleMatches
 } from './match.js';
 import { checkTaskCompletion } from './tasks.js';
-import { swapTiles } from './board.js'; // swapTiles тоже лучше вынести в board.js
-import { render, initBoard, dropTiles, fillBoard } from './game.js'; // если эти функции экспортируются
+
+import { swapTiles, render, initBoard, dropTiles, fillBoard } from './game.js';
 
 export function handleTouchStart(event, canvas) {
     if (state.isProcessing) return;
