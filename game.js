@@ -117,7 +117,7 @@ function initGame() {
     }
 }
 
-function initBoard() {
+export function initBoard() {
     console.log('Initializing board...');
     try {
         if (!Number.isInteger(state.GRID_HEIGHT) || !Number.isInteger(state.GRID_WIDTH) || state.GRID_HEIGHT <= 0 || state.GRID_WIDTH <= 0) {
@@ -172,7 +172,7 @@ function resolveInitialMatches() {
     }
 }
 
-function dropTiles() {
+export function dropTiles() {
     try {
         for (let col = 0; col < state.GRID_WIDTH; col++) {
             let emptyRow = state.GRID_HEIGHT - 1;
@@ -194,7 +194,7 @@ function dropTiles() {
     }
 }
 
-function fillBoard() {
+export function fillBoard() {
     try {
         for (let row = 0; row < state.GRID_HEIGHT; row++) {
             for (let col = 0; col < state.GRID_WIDTH; col++) {
